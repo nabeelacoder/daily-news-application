@@ -1,0 +1,194 @@
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: whitesmoke;
+}
+.header{
+    background-color: #111120;
+    color: whitesmoke;
+    padding: 30px 100px;
+    line-height: 15px;
+    position:sticky;
+    margin-bottom: 30px;
+}
+.header .logo{
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 900;
+    color: rgb(167, 167, 215);
+}
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container ul{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+.header-container ul li a{
+    color: whitesmoke;
+    font-size: 20px;
+    font-weight: 800;
+    text-decoration: none;
+    font-style: italic;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 0.5fr;
+    padding: 0 100px;
+    gap: 20px;
+}
+
+.container .headline .headline-img{
+    border: 5px solid #111120;
+    width: 100%;
+    height: 510px;
+    
+}
+.container .headline .headline-img img{
+    width: 100%;
+    height: 100%;
+}
+.container .headline .title,
+.container .categories .business .title,
+.container .categories .technology .title,
+.random-news .news-container .news-card .title{
+    color: rgb(167, 167, 215);
+    font-style: italic;
+    font-weight: 900;
+}
+.container .headline .headline-title a{
+    color: #111120;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+.container .headline .headline-title a:hover{
+    text-decoration: underline;
+}
+
+.container .categories .business .business-img{
+    width: 350px;
+    border: 4px solid #111120;
+    height: 200px;
+}
+.container .categories .business .business-img img{
+    width: 100%;
+    height: 100%;
+    
+}
+.container .categories .business .business-text a{
+    color: #111120;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.container .categories .business .business-text a:hover{
+    text-decoration: underline;
+}
+.container .categories .business .business-content p{
+    text-align: center;
+}
+
+.container .categories .technology .technology-img{
+    width: 350px;
+    border: 4px solid #111120;
+    height: 200px;
+}
+.container .categories .technology .technology-img img{
+    width: 100%;
+    height: 100%;
+    
+}
+.container .categories .technology .technology-text a{
+    color: #111120;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.container .categories .technology .technology-text a:hover{
+    text-decoration: underline;
+}
+.container .categories .technology .technology-content p{
+    text-align: center;
+}
+.random-news .news-container .news-card{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.random-news .news-container .news-card .news-card-img,
+.random-news .news-container .news-card .news-card-img2{
+    width: 250px;
+    border: 3px solid #111120;
+    height: 120px;
+   
+}
+.random-news .news-container .news-card .news-card-img img,
+.random-news .news-container .news-card .news-card-img2 img{
+    width: 100%;
+    height: 100%;
+}
+.random-news .news-container .news-card .news-card-title a,
+.random-news .news-container .news-card .news-card-title2 a{
+    color: #111120;
+    font-weight: 800;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+}
+.random-news .news-container .news-card .news-card-title a:hover,
+.random-news .news-container .news-card .news-card-title2 a:hover{
+    text-decoration: underline;
+}
+.random-news .news-container .news-card .news-card-text p{
+    margin-top: 5px;
+}
+footer{
+    font-size: 15px;
+    text-align: center;
+    font-weight: 800;
+    font-style: italic;
+    margin: 10px;
+}
+
+@media only screen and (max-width:750px){
+    .header .logo{
+        font-size: 25px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .header-container ul{
+        display: none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 0.5fr);
+    }
+    .container .headline .headline-img{
+        height: 200px;
+        width: 350px;
+    }
+    .container .headline .headline-title a{
+        text-align: left;
+        font-size: 16px;
+    }
+    .random-news .news-container .news-card .news-card-img,
+    .random-news .news-container .news-card .news-card-img2{
+        height: 200px;
+        width: 350px;
+    }
+}
